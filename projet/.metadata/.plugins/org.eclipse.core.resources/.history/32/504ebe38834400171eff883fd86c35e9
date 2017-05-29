@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="behaviourMM" nsURI="htt:p//org/eclipse/projectMDE/project" nsPrefix="org.eclipse.projectMDE.project">
-  <eClassifiers xsi:type="ecore:EClass" name="Loop" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="forLoop" eSuperTypes="#//Loop"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LoopStructure" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="forLoop" eSuperTypes="#//LoopStructure"/>
   <eClassifiers xsi:type="ecore:EClass" name="Operator" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="element1" lowerBound="1"
         eType="#//Variable" containment="true"/>
@@ -26,25 +26,28 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="intVariable" eSuperTypes="#//Variable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="doubleVariable" eSuperTypes="#//Variable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="boolVariable" eSuperTypes="#//Variable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="charVariable" eSuperTypes="#//Variable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="stringVariable" eSuperTypes="#//Variable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Conditionnal" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ifConditionnal" eSuperTypes="#//Conditionnal">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
-        eType="#//Operator" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="else" eType="#//elseConditionnal"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="elseConditionnal" eSuperTypes="#//Conditionnal"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Assignment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConditionStructure" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ifCondition" eSuperTypes="#//ConditionStructure"/>
 </ecore:EPackage>

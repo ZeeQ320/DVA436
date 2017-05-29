@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.projectMDE.project/src" modelPluginID="org.eclipse.projectMDE.project"
+    modelName="Behaviour" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>behaviour.ecore</foreignModel>
+  <genPackages prefix="BehaviourMM" disposableProviderFactory="true" ecorePackage="behaviour.ecore#/">
+    <genClasses image="false" ecoreClass="behaviour.ecore#//LoopStructure"/>
+    <genClasses ecoreClass="behaviour.ecore#//forLoop"/>
+    <genClasses image="false" ecoreClass="behaviour.ecore#//Operator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//Operator/element1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//Operator/element2"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//additionOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//soustractionOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//multiplicationOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//divisionOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//equalOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//inferiorOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//superiorOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//inferiorOrEqualOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//superiorOrEqualOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//andOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//orOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//noOperator"/>
+    <genClasses image="false" ecoreClass="behaviour.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//Variable/name"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//intVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//intVariable/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//intVariable/type"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//doubleVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//doubleVariable/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//doubleVariable/type"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//boolVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//boolVariable/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//boolVariable/type"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//charVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//charVariable/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//charVariable/type"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//stringVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//stringVariable/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//stringVariable/type"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//Assignment"/>
+    <genClasses image="false" ecoreClass="behaviour.ecore#//ConditionStructure"/>
+    <genClasses ecoreClass="behaviour.ecore#//ifCondition"/>
+  </genPackages>
+</genmodel:GenModel>
