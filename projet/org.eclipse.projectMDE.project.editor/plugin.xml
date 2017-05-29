@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated structure -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="structureMM.presentation.StructureMMModelWizardID"
+            name="%_UI_StructureMMModelWizard_label"
+            class="structureMM.presentation.StructureMMModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/StructureMMModelFile.gif">
+         <description>%_UI_StructureMMModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated structure -->
+      <editor
+            id="structureMM.presentation.StructureMMEditorID"
+            name="%_UI_StructureMMEditor_label"
+            icon="icons/full/obj16/StructureMMModelFile.gif"
+            extensions="structuremm"
+            class="structureMM.presentation.StructureMMEditor"
+            contributorClass="structureMM.presentation.StructureMMActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated structure -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="behaviourMM.presentation.BehaviourMMModelWizardID"
+            name="%_UI_BehaviourMMModelWizard_label"
+            class="behaviourMM.presentation.BehaviourMMModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/BehaviourMMModelFile.gif">
+         <description>%_UI_BehaviourMMModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated structure -->
+      <editor
+            id="behaviourMM.presentation.BehaviourMMEditorID"
+            name="%_UI_BehaviourMMEditor_label"
+            icon="icons/full/obj16/BehaviourMMModelFile.gif"
+            extensions="behaviourmm"
+            class="behaviourMM.presentation.BehaviourMMEditor"
+            contributorClass="behaviourMM.presentation.BehaviourMMActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

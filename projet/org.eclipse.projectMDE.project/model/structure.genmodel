@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.projectMDE.project/src" modelPluginID="org.eclipse.projectMDE.project"
+    modelName="Structure" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>structure.ecore</foreignModel>
+  <genPackages prefix="StructureMM" disposableProviderFactory="true" ecorePackage="structure.ecore#/">
+    <genClasses ecoreClass="structure.ecore#//Class">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structure.ecore#//Class/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference structure.ecore#//Class/methods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference structure.ecore#//Class/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="structure.ecore#//Package">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structure.ecore#//Package/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="structure.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structure.ecore#//Attribute/name"/>
+    </genClasses>
+    <genClasses ecoreClass="structure.ecore#//doubleAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structure.ecore#//doubleAttribute/value"/>
+    </genClasses>
+    <genClasses ecoreClass="structure.ecore#//stringAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structure.ecore#//stringAttribute/value"/>
+    </genClasses>
+    <genClasses ecoreClass="structure.ecore#//charAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structure.ecore#//charAttribute/value"/>
+    </genClasses>
+    <genClasses ecoreClass="structure.ecore#//boolAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structure.ecore#//boolAttribute/value"/>
+    </genClasses>
+    <genClasses ecoreClass="structure.ecore#//intAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structure.ecore#//intAttribute/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="structure.ecore#//Method">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structure.ecore#//Method/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference structure.ecore#//Method/inputs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference structure.ecore#//Method/statement"/>
+    </genClasses>
+    <genClasses ecoreClass="structure.ecore#//intMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structure.ecore#//intMethod/returnType"/>
+    </genClasses>
+    <genClasses ecoreClass="structure.ecore#//boolMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structure.ecore#//boolMethod/returnType"/>
+    </genClasses>
+    <genClasses ecoreClass="structure.ecore#//charMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structure.ecore#//charMethod/returnType"/>
+    </genClasses>
+    <genClasses ecoreClass="structure.ecore#//stringMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structure.ecore#//stringMethod/returnType"/>
+    </genClasses>
+    <genClasses ecoreClass="structure.ecore#//doubleMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structure.ecore#//doubleMethod/returnType"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="BehaviourMM" disposableProviderFactory="true" ecorePackage="behaviour.ecore#/">
+    <genClasses image="false" ecoreClass="behaviour.ecore#//Loop">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//Loop/statement"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//forLoop">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference behaviour.ecore#//forLoop/iteration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//forLoop/conditionStop"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//forLoop/startValue"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="behaviour.ecore#//Operator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//Operator/element1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//Operator/element2"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//additionOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//soustractionOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//multiplicationOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//divisionOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//equalOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//inferiorOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//superiorOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//inferiorOrEqualOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//superiorOrEqualOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//andOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//orOperator"/>
+    <genClasses ecoreClass="behaviour.ecore#//noOperator"/>
+    <genClasses image="false" ecoreClass="behaviour.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//Variable/name"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//intVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//intVariable/value"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//doubleVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//doubleVariable/value"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//boolVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//boolVariable/value"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//charVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//charVariable/value"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//stringVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//stringVariable/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="behaviour.ecore#//Conditionnal">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//Conditionnal/statement"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//ifConditionnal">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//ifConditionnal/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//ifConditionnal/else"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//elseConditionnal"/>
+    <genClasses image="false" ecoreClass="behaviour.ecore#//Statement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//Statement/id"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="behaviour.ecore#//Affectation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//Affectation/receivingVariable"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//operationAffectation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//operationAffectation/receivedOperation"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//variableAffectation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//variableAffectation/receivedVariable"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//intAffectation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//intAffectation/receivedInt"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//doubleAffectation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//doubleAffectation/receivedDouble"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//boolAffectation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//boolAffectation/receivedBool"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//charAffectation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//charAffectation/receivedChar"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//stringAffectation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//stringAffectation/receivedString"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//readAffectation"/>
+    <genClasses ecoreClass="behaviour.ecore#//writeConsole">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//writeConsole/variable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//writeConsole/operation"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
