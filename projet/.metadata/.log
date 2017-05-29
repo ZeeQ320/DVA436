@@ -1,0 +1,116 @@
+!SESSION 2017-05-24 15:21:24.803 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.modeling.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.modeling.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-05-24 15:22:30.448
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\leabr'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2017-05-29 15:23:43.791 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.modeling.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.modeling.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-05-29 15:26:46.492
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-05-29 15:27:46.628
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\leabr'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.emf.common 2 0 2017-05-29 15:53:33.099
+!MESSAGE An exception was ignored during command execution
+!STACK 0
+org.eclipse.emf.common.util.WrappedException: An exception was ignored during command execution
+	at org.eclipse.emf.common.command.BasicCommandStack.handleError(BasicCommandStack.java:281)
+	at org.eclipse.emf.common.command.BasicCommandStack.execute(BasicCommandStack.java:112)
+	at org.eclipse.emf.ecore.presentation.EcoreEditor$4.execute(EcoreEditor.java:851)
+	at org.eclipse.emf.edit.provider.ItemPropertyDescriptor.setPropertyValue(ItemPropertyDescriptor.java:1605)
+	at org.eclipse.emf.edit.ui.provider.PropertySource.setPropertyValue(PropertySource.java:121)
+	at org.eclipse.ui.views.properties.PropertySheetEntry.valueChanged(PropertySheetEntry.java:754)
+	at org.eclipse.ui.views.properties.PropertySheetEntry.setValue(PropertySheetEntry.java:694)
+	at org.eclipse.ui.views.properties.PropertySheetEntry.applyEditorValue(PropertySheetEntry.java:150)
+	at org.eclipse.ui.views.properties.PropertySheetEntry$1.applyEditorValue(PropertySheetEntry.java:111)
+	at org.eclipse.jface.viewers.CellEditor$1.run(CellEditor.java:336)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.CellEditor.fireApplyEditorValue(CellEditor.java:333)
+	at org.eclipse.jface.viewers.ComboBoxCellEditor.applyEditorValueAndDeactivate(ComboBoxCellEditor.java:272)
+	at org.eclipse.jface.viewers.ComboBoxCellEditor.focusLost(ComboBoxCellEditor.java:279)
+	at org.eclipse.jface.viewers.ComboBoxCellEditor$3.focusLost(ComboBoxCellEditor.java:168)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:144)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:802)
+	at org.eclipse.swt.custom.CCombo.handleFocus(CCombo.java:922)
+	at org.eclipse.swt.custom.CCombo$2.handleEvent(CCombo.java:150)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1270)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1078)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:2934)
+	at org.eclipse.swt.widgets.Widget.wmSetFocus(Widget.java:2437)
+	at org.eclipse.swt.widgets.Control.WM_SETFOCUS(Control.java:5446)
+	at org.eclipse.swt.widgets.Canvas.WM_SETFOCUS(Canvas.java:485)
+	at org.eclipse.swt.widgets.Decorations.WM_SETFOCUS(Decorations.java:1817)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4869)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1656)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2199)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5110)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2547)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:506)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4897)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1656)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2199)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5110)
+	at org.eclipse.swt.internal.win32.OS.PeekMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(OS.java:3144)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3819)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EClassImpl.eSet(EClassImpl.java:1091)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSet(BasicEObjectImpl.java:1071)
+	at org.eclipse.emf.edit.command.SetCommand.doExecute(SetCommand.java:726)
+	at org.eclipse.emf.edit.command.AbstractOverrideableCommand.execute(AbstractOverrideableCommand.java:125)
+	at org.eclipse.emf.common.command.BasicCommandStack.execute(BasicCommandStack.java:78)
+	... 71 more
