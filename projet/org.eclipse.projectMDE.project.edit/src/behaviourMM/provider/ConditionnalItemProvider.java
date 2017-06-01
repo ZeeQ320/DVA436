@@ -201,11 +201,6 @@ public class ConditionnalItemProvider extends StatementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(BehaviourMMPackage.Literals.CONDITIONNAL__STATEMENT,
-				 BehaviourMMFactory.eINSTANCE.createreadAffectation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(BehaviourMMPackage.Literals.CONDITIONNAL__STATEMENT,
 				 BehaviourMMFactory.eINSTANCE.createwriteConsole()));
 	}
 

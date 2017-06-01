@@ -68,7 +68,6 @@ public class StructureMMFactoryImpl extends EFactoryImpl implements StructureMMF
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case StructureMMPackage.CLASS: return createClass();
-			case StructureMMPackage.PACKAGE: return createPackage();
 			case StructureMMPackage.DOUBLE_ATTRIBUTE: return createdoubleAttribute();
 			case StructureMMPackage.STRING_ATTRIBUTE: return createstringAttribute();
 			case StructureMMPackage.CHAR_ATTRIBUTE: return createcharAttribute();
@@ -92,16 +91,6 @@ public class StructureMMFactoryImpl extends EFactoryImpl implements StructureMMF
 	public structureMM.Class createClass() {
 		ClassImpl class_ = new ClassImpl();
 		return class_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public structureMM.Package createPackage() {
-		PackageImpl package_ = new PackageImpl();
-		return package_;
 	}
 
 	/**

@@ -1,0 +1,263 @@
+package test.handlers
+
+import org.eclipse.xtext.generator.IGenerator
+import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.xtext.generator.IFileSystemAccess
+
+
+import structureMM.Class
+import structureMM.Attribute
+import structureMM.doubleAttribute
+import structureMM.intAttribute
+import structureMM.charAttribute
+import structureMM.stringAttribute
+import structureMM.boolAttribute
+import structureMM.Method
+import structureMM.doubleMethod
+import structureMM.intMethod
+import structureMM.charMethod
+import structureMM.stringMethod
+import structureMM.boolMethod
+import behaviourMM.Statement
+import behaviourMM.Variable
+import behaviourMM.Loop
+import behaviourMM.Conditionnal
+import behaviourMM.Affectation
+import behaviourMM.writeConsole
+import behaviourMM.intVariable
+import behaviourMM.doubleVariable
+import behaviourMM.charVariable
+import behaviourMM.boolVariable
+import behaviourMM.stringVariable
+import behaviourMM.forLoop
+import behaviourMM.Operator
+import behaviourMM.ifConditionnal
+import behaviourMM.elseConditionnal
+import behaviourMM.operationAffectation
+import behaviourMM.intAffectation
+import behaviourMM.doubleAffectation
+import behaviourMM.charAffectation
+import behaviourMM.stringAffectation
+import behaviourMM.boolAffectation
+import behaviourMM.variableAffectation
+import behaviourMM.readAffectation
+
+class test implements IGenerator {
+	
+	def getType(Attribute a) {
+    	
+    	if (a instanceof doubleAttribute) {
+    		return "double"
+    	} else if (a instanceof intAttribute) {
+    		return "int"
+    	} else if (a instanceof boolAttribute) {
+    		return "bool"
+    	} else if (a instanceof charAttribute) {
+    		return "char"
+    	} else if (a instanceof stringAttribute) {
+    		return "string"
+    	}
+    }
+    
+    def getType(Method m) {
+    	
+    	if (m instanceof doubleMethod) {
+    		return "double"
+    	} else if (m instanceof intMethod) {
+    		return "int"
+    	} else if (m instanceof boolMethod) {
+    		return "bool"
+    	} else if (m instanceof charMethod) {
+    		return "char"
+    	} else if (m instanceof stringMethod) {
+    		return "string"
+    	}
+    	
+    }
+		
+	def getInputs(Method m) {
+		
+		var buffer = new StringBuffer
+		
+		for (var i = 0; i < m.inputs.length; i++) {
+			buffer.append(getType(m.inputs.get(i)))
+			buffer.append(" ")
+			buffer.append(m.inputs.get(i).name)
+			if(i != m.inputs.length) {
+				buffer.append(", ")
+			}
+		}
+		
+		return buffer.toString
+		
+	}
+			
+	def getVariable(Variable v) {
+		
+		if (v instanceof doubleVariable) {
+    		return "double"
+    	} else if (v instanceof intVariable) {
+    		return "int"
+    	} else if (v instanceof boolVariable) {
+    		return "bool"
+    	} else if (v instanceof charVariable) {
+    		return "char"
+    	} else if (v instanceof stringVariable) {
+    		return "string"
+    	}
+		
+	}	
+	
+	def getFor(forLoop f) '''
+	
+		for(«f.startValue», «f.iteration», «f.conditionStop») {
+			
+			«FOR s : f.statement»
+				
+				«getStatements(s)»
+				
+			«ENDFOR»
+			
+		}
+	
+	'''
+	
+	def getLoop(Loop l) {
+		
+		if (l instanceof forLoop) {
+			getFor(l)
+		}
+		
+	}
+	
+	def writeElse(elseConditionnal e) '''
+	
+		else {
+		
+			«FOR s : e.statement»
+			
+    			«getStatements(s)»
+			
+    		«ENDFOR»
+		
+		}
+		
+	'''
+	
+	def getElse(ifConditionnal i) {
+		
+		if(i.elseC != null) {
+			writeElse(i.elseC)
+		}
+		
+	}
+	
+	def getIf(ifConditionnal i) '''
+	
+		if («i.condition») {
+			
+			«FOR s : i.statement»
+				
+				«getStatements(i)»
+				
+			«ENDFOR»
+			
+		} «getElse(i)»
+	
+	'''
+	
+	def getConditionnal(Conditionnal c) {
+	
+		if (c instanceof ifConditionnal) {
+			getIf(c)
+		}
+		
+	}
+	
+	def getAffectation(Affectation a) {
+		
+		if (a instanceof operationAffectation) {
+    		getOperationAff(a)
+    	} else if (a instanceof intAffectation) {
+    		getIntAff(a)
+    	} else if (a instanceof boolAffectation) {
+    		getBoolAff(a)
+    	} else if (a instanceof charAffectation) {
+    		getCharAff(a)
+    	} else if (a instanceof stringAffectation) {
+    		getStringAff(a)
+    	} else if (a instanceof doubleAffectation) {
+    		getDoubleAff(a)
+    	} else if (a instanceof variableAffectation) {
+    		getVariableAff(a)
+    	} else if (a instanceof readAffectation) {
+    		getReadAff(a)
+    	}
+    		
+	}
+	
+	def getConsole(writeConsole w) {
+		
+	}
+	
+	def writeConsole(writeConsole w) '''
+	
+		System.Out.println("«getConsole(w)»");
+	
+	'''
+			
+	def getStatements(Statement s) {
+		
+		if (s instanceof Variable) {
+			getVariable(s)
+		} else if (s instanceof Loop) {
+			getLoop(s)
+		} else if (s instanceof Conditionnal) {
+			getConditionnal(s)
+		} else if (s instanceof Affectation) {
+			getAffectation(s)
+		} else if (s instanceof writeConsole) {
+			s.writeConsole
+		}
+		
+	}
+    
+    def compile(Class c) '''
+    package «c.name»;
+    
+    public class «c.name» {
+    	
+    	«FOR a : c.attributes»
+    	
+    		// Attributes
+    	
+    		public «getType(a)» «a.name»
+    		
+    	«ENDFOR»
+    	
+    	«FOR m : c.methods»
+    		
+    		// Methods
+    		
+    		public «getType(m)» «m.name» («getInputs(m)») {
+    			
+    			«FOR s : m.statement»
+    			
+    				«getStatements(s)»
+    			
+    			«ENDFOR»
+    		}
+    		
+    	«ENDFOR»	
+    	
+    '''
+	
+	def static main(String[] args) {
+    
+    }
+	
+	override doGenerate(Resource input, IFileSystemAccess fsa) {
+		throw new UnsupportedOperationException("TODO: auto-generated method stub")
+	}
+				
+}

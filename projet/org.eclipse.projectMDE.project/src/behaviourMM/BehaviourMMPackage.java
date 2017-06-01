@@ -1215,13 +1215,13 @@ public interface BehaviourMMPackage extends EPackage {
 	int IF_CONDITIONNAL__CONDITION = CONDITIONNAL_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Else</b></em>' containment reference.
+	 * The feature id for the '<em><b>Else C</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IF_CONDITIONNAL__ELSE = CONDITIONNAL_FEATURE_COUNT + 1;
+	int IF_CONDITIONNAL__ELSE_C = CONDITIONNAL_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>if Conditionnal</em>' class.
@@ -1719,52 +1719,6 @@ public interface BehaviourMMPackage extends EPackage {
 	int STRING_AFFECTATION_OPERATION_COUNT = AFFECTATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link behaviourMM.impl.readAffectationImpl <em>read Affectation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see behaviourMM.impl.readAffectationImpl
-	 * @see behaviourMM.impl.BehaviourMMPackageImpl#getreadAffectation()
-	 * @generated
-	 */
-	int READ_AFFECTATION = 33;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int READ_AFFECTATION__ID = AFFECTATION__ID;
-
-	/**
-	 * The feature id for the '<em><b>Receiving Variable</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int READ_AFFECTATION__RECEIVING_VARIABLE = AFFECTATION__RECEIVING_VARIABLE;
-
-	/**
-	 * The number of structural features of the '<em>read Affectation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int READ_AFFECTATION_FEATURE_COUNT = AFFECTATION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>read Affectation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int READ_AFFECTATION_OPERATION_COUNT = AFFECTATION_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link behaviourMM.impl.writeConsoleImpl <em>write Console</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1772,7 +1726,7 @@ public interface BehaviourMMPackage extends EPackage {
 	 * @see behaviourMM.impl.BehaviourMMPackageImpl#getwriteConsole()
 	 * @generated
 	 */
-	int WRITE_CONSOLE = 34;
+	int WRITE_CONSOLE = 33;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2205,15 +2159,15 @@ public interface BehaviourMMPackage extends EPackage {
 	EReference getifConditionnal_Condition();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link behaviourMM.ifConditionnal#getElse <em>Else</em>}'.
+	 * Returns the meta object for the containment reference '{@link behaviourMM.ifConditionnal#getElseC <em>Else C</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Else</em>'.
-	 * @see behaviourMM.ifConditionnal#getElse()
+	 * @return the meta object for the containment reference '<em>Else C</em>'.
+	 * @see behaviourMM.ifConditionnal#getElseC()
 	 * @see #getifConditionnal()
 	 * @generated
 	 */
-	EReference getifConditionnal_Else();
+	EReference getifConditionnal_ElseC();
 
 	/**
 	 * Returns the meta object for class '{@link behaviourMM.elseConditionnal <em>else Conditionnal</em>}'.
@@ -2413,16 +2367,6 @@ public interface BehaviourMMPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getstringAffectation_ReceivedString();
-
-	/**
-	 * Returns the meta object for class '{@link behaviourMM.readAffectation <em>read Affectation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>read Affectation</em>'.
-	 * @see behaviourMM.readAffectation
-	 * @generated
-	 */
-	EClass getreadAffectation();
 
 	/**
 	 * Returns the meta object for class '{@link behaviourMM.writeConsole <em>write Console</em>}'.
@@ -2822,12 +2766,12 @@ public interface BehaviourMMPackage extends EPackage {
 		EReference IF_CONDITIONNAL__CONDITION = eINSTANCE.getifConditionnal_Condition();
 
 		/**
-		 * The meta object literal for the '<em><b>Else</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Else C</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference IF_CONDITIONNAL__ELSE = eINSTANCE.getifConditionnal_Else();
+		EReference IF_CONDITIONNAL__ELSE_C = eINSTANCE.getifConditionnal_ElseC();
 
 		/**
 		 * The meta object literal for the '{@link behaviourMM.impl.elseConditionnalImpl <em>else Conditionnal</em>}' class.
@@ -3000,16 +2944,6 @@ public interface BehaviourMMPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute STRING_AFFECTATION__RECEIVED_STRING = eINSTANCE.getstringAffectation_ReceivedString();
-
-		/**
-		 * The meta object literal for the '{@link behaviourMM.impl.readAffectationImpl <em>read Affectation</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see behaviourMM.impl.readAffectationImpl
-		 * @see behaviourMM.impl.BehaviourMMPackageImpl#getreadAffectation()
-		 * @generated
-		 */
-		EClass READ_AFFECTATION = eINSTANCE.getreadAffectation();
 
 		/**
 		 * The meta object literal for the '{@link behaviourMM.impl.writeConsoleImpl <em>write Console</em>}' class.

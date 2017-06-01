@@ -13,7 +13,7 @@ package behaviourMM;
  * </p>
  * <ul>
  *   <li>{@link behaviourMM.ifConditionnal#getCondition <em>Condition</em>}</li>
- *   <li>{@link behaviourMM.ifConditionnal#getElse <em>Else</em>}</li>
+ *   <li>{@link behaviourMM.ifConditionnal#getElseC <em>Else C</em>}</li>
  * </ul>
  *
  * @see behaviourMM.BehaviourMMPackage#getifConditionnal()
@@ -48,29 +48,29 @@ public interface ifConditionnal extends Conditionnal {
 	void setCondition(Operator value);
 
 	/**
-	 * Returns the value of the '<em><b>Else</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Else C</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Else</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Else C</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Else</em>' containment reference.
-	 * @see #setElse(elseConditionnal)
-	 * @see behaviourMM.BehaviourMMPackage#getifConditionnal_Else()
+	 * @return the value of the '<em>Else C</em>' containment reference.
+	 * @see #setElseC(elseConditionnal)
+	 * @see behaviourMM.BehaviourMMPackage#getifConditionnal_ElseC()
 	 * @model containment="true"
 	 * @generated
 	 */
-	elseConditionnal getElse();
+	elseConditionnal getElseC();
 
 	/**
-	 * Sets the value of the '{@link behaviourMM.ifConditionnal#getElse <em>Else</em>}' containment reference.
+	 * Sets the value of the '{@link behaviourMM.ifConditionnal#getElseC <em>Else C</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Else</em>' containment reference.
-	 * @see #getElse()
+	 * @param value the new value of the '<em>Else C</em>' containment reference.
+	 * @see #getElseC()
 	 * @generated
 	 */
-	void setElse(elseConditionnal value);
+	void setElseC(elseConditionnal value);
 
 } // ifConditionnal

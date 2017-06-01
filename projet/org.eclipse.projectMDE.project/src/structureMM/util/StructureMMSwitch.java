@@ -84,12 +84,6 @@ public class StructureMMSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StructureMMPackage.PACKAGE: {
-				structureMM.Package package_ = (structureMM.Package)theEObject;
-				T result = casePackage(package_);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case StructureMMPackage.ATTRIBUTE: {
 				Attribute attribute = (Attribute)theEObject;
 				T result = caseAttribute(attribute);
@@ -188,21 +182,6 @@ public class StructureMMSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseClass(structureMM.Class object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Package</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Package</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePackage(structureMM.Package object) {
 		return null;
 	}
 

@@ -56,7 +56,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ifConditionnal" eSuperTypes="#//Conditionnal">
     <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
         eType="#//Operator" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="else" eType="#//elseConditionnal"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elseC" eType="#//elseConditionnal"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="elseConditionnal" eSuperTypes="#//Conditionnal"/>
@@ -95,7 +95,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="receivedString" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="readAffectation" eSuperTypes="#//Affectation"/>
   <eClassifiers xsi:type="ecore:EClass" name="writeConsole" eSuperTypes="#//Statement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="variable" upperBound="-1"
         eType="#//Variable" containment="true"/>

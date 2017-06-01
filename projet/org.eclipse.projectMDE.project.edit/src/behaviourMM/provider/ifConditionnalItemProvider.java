@@ -63,7 +63,7 @@ public class ifConditionnalItemProvider extends ConditionnalItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(BehaviourMMPackage.Literals.IF_CONDITIONNAL__CONDITION);
-			childrenFeatures.add(BehaviourMMPackage.Literals.IF_CONDITIONNAL__ELSE);
+			childrenFeatures.add(BehaviourMMPackage.Literals.IF_CONDITIONNAL__ELSE_C);
 		}
 		return childrenFeatures;
 	}
@@ -118,7 +118,7 @@ public class ifConditionnalItemProvider extends ConditionnalItemProvider {
 
 		switch (notification.getFeatureID(ifConditionnal.class)) {
 			case BehaviourMMPackage.IF_CONDITIONNAL__CONDITION:
-			case BehaviourMMPackage.IF_CONDITIONNAL__ELSE:
+			case BehaviourMMPackage.IF_CONDITIONNAL__ELSE_C:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -198,7 +198,7 @@ public class ifConditionnalItemProvider extends ConditionnalItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(BehaviourMMPackage.Literals.IF_CONDITIONNAL__ELSE,
+				(BehaviourMMPackage.Literals.IF_CONDITIONNAL__ELSE_C,
 				 BehaviourMMFactory.eINSTANCE.createelseConditionnal()));
 	}
 
@@ -215,7 +215,7 @@ public class ifConditionnalItemProvider extends ConditionnalItemProvider {
 
 		boolean qualify =
 			childFeature == BehaviourMMPackage.Literals.CONDITIONNAL__STATEMENT ||
-			childFeature == BehaviourMMPackage.Literals.IF_CONDITIONNAL__ELSE;
+			childFeature == BehaviourMMPackage.Literals.IF_CONDITIONNAL__ELSE_C;
 
 		if (qualify) {
 			return getString

@@ -254,11 +254,6 @@ public class forLoopItemProvider extends LoopItemProvider {
 			(createChildParameter
 				(BehaviourMMPackage.Literals.FOR_LOOP__START_VALUE,
 				 BehaviourMMFactory.eINSTANCE.createstringAffectation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(BehaviourMMPackage.Literals.FOR_LOOP__START_VALUE,
-				 BehaviourMMFactory.eINSTANCE.createreadAffectation()));
 	}
 
 	/**

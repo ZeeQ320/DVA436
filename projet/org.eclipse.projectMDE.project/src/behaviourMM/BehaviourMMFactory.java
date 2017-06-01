@@ -265,15 +265,6 @@ public interface BehaviourMMFactory extends EFactory {
 	stringAffectation createstringAffectation();
 
 	/**
-	 * Returns a new object of class '<em>read Affectation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>read Affectation</em>'.
-	 * @generated
-	 */
-	readAffectation createreadAffectation();
-
-	/**
 	 * Returns a new object of class '<em>write Console</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

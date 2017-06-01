@@ -201,11 +201,6 @@ public class LoopItemProvider extends StatementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(BehaviourMMPackage.Literals.LOOP__STATEMENT,
-				 BehaviourMMFactory.eINSTANCE.createreadAffectation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(BehaviourMMPackage.Literals.LOOP__STATEMENT,
 				 BehaviourMMFactory.eINSTANCE.createwriteConsole()));
 	}
 

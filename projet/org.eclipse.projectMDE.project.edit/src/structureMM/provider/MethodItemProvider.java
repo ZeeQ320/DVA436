@@ -275,11 +275,6 @@ public class MethodItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(StructureMMPackage.Literals.METHOD__STATEMENT,
-				 BehaviourMMFactory.eINSTANCE.createreadAffectation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(StructureMMPackage.Literals.METHOD__STATEMENT,
 				 BehaviourMMFactory.eINSTANCE.createwriteConsole()));
 	}
 

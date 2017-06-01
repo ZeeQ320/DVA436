@@ -693,29 +693,6 @@ public class BehaviourMMItemProviderAdapterFactory extends BehaviourMMAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link behaviourMM.readAffectation} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected readAffectationItemProvider readAffectationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link behaviourMM.readAffectation}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createreadAffectationAdapter() {
-		if (readAffectationItemProvider == null) {
-			readAffectationItemProvider = new readAffectationItemProvider(this);
-		}
-
-		return readAffectationItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link behaviourMM.writeConsole} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -864,7 +841,6 @@ public class BehaviourMMItemProviderAdapterFactory extends BehaviourMMAdapterFac
 		if (boolAffectationItemProvider != null) boolAffectationItemProvider.dispose();
 		if (charAffectationItemProvider != null) charAffectationItemProvider.dispose();
 		if (stringAffectationItemProvider != null) stringAffectationItemProvider.dispose();
-		if (readAffectationItemProvider != null) readAffectationItemProvider.dispose();
 		if (writeConsoleItemProvider != null) writeConsoleItemProvider.dispose();
 	}
 

@@ -83,7 +83,6 @@ public class BehaviourMMFactoryImpl extends EFactoryImpl implements BehaviourMMF
 			case BehaviourMMPackage.BOOL_AFFECTATION: return createboolAffectation();
 			case BehaviourMMPackage.CHAR_AFFECTATION: return createcharAffectation();
 			case BehaviourMMPackage.STRING_AFFECTATION: return createstringAffectation();
-			case BehaviourMMPackage.READ_AFFECTATION: return createreadAffectation();
 			case BehaviourMMPackage.WRITE_CONSOLE: return createwriteConsole();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -358,16 +357,6 @@ public class BehaviourMMFactoryImpl extends EFactoryImpl implements BehaviourMMF
 	public stringAffectation createstringAffectation() {
 		stringAffectationImpl stringAffectation = new stringAffectationImpl();
 		return stringAffectation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public readAffectation createreadAffectation() {
-		readAffectationImpl readAffectation = new readAffectationImpl();
-		return readAffectation;
 	}
 
 	/**

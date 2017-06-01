@@ -95,29 +95,6 @@ public class StructureMMItemProviderAdapterFactory extends StructureMMAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link structureMM.Package} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PackageItemProvider packageItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link structureMM.Package}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPackageAdapter() {
-		if (packageItemProvider == null) {
-			packageItemProvider = new PackageItemProvider(this);
-		}
-
-		return packageItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link structureMM.doubleAttribute} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -447,7 +424,6 @@ public class StructureMMItemProviderAdapterFactory extends StructureMMAdapterFac
 	 */
 	public void dispose() {
 		if (classItemProvider != null) classItemProvider.dispose();
-		if (packageItemProvider != null) packageItemProvider.dispose();
 		if (doubleAttributeItemProvider != null) doubleAttributeItemProvider.dispose();
 		if (stringAttributeItemProvider != null) stringAttributeItemProvider.dispose();
 		if (charAttributeItemProvider != null) charAttributeItemProvider.dispose();

@@ -31,15 +31,6 @@ public interface StructureMMFactory extends EFactory {
 	Class createClass();
 
 	/**
-	 * Returns a new object of class '<em>Package</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Package</em>'.
-	 * @generated
-	 */
-	Package createPackage();
-
-	/**
 	 * Returns a new object of class '<em>double Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -31,7 +31,6 @@ import behaviourMM.multiplicationOperator;
 import behaviourMM.noOperator;
 import behaviourMM.operationAffectation;
 import behaviourMM.orOperator;
-import behaviourMM.readAffectation;
 import behaviourMM.soustractionOperator;
 import behaviourMM.stringAffectation;
 import behaviourMM.stringVariable;
@@ -288,13 +287,6 @@ public class BehaviourMMPackageImpl extends EPackageImpl implements BehaviourMMP
 	 * @generated
 	 */
 	private EClass stringAffectationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass readAffectationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -707,7 +699,7 @@ public class BehaviourMMPackageImpl extends EPackageImpl implements BehaviourMMP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getifConditionnal_Else() {
+	public EReference getifConditionnal_ElseC() {
 		return (EReference)ifConditionnalEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -887,15 +879,6 @@ public class BehaviourMMPackageImpl extends EPackageImpl implements BehaviourMMP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getreadAffectation() {
-		return readAffectationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getwriteConsole() {
 		return writeConsoleEClass;
 	}
@@ -1005,7 +988,7 @@ public class BehaviourMMPackageImpl extends EPackageImpl implements BehaviourMMP
 
 		ifConditionnalEClass = createEClass(IF_CONDITIONNAL);
 		createEReference(ifConditionnalEClass, IF_CONDITIONNAL__CONDITION);
-		createEReference(ifConditionnalEClass, IF_CONDITIONNAL__ELSE);
+		createEReference(ifConditionnalEClass, IF_CONDITIONNAL__ELSE_C);
 
 		elseConditionnalEClass = createEClass(ELSE_CONDITIONNAL);
 
@@ -1035,8 +1018,6 @@ public class BehaviourMMPackageImpl extends EPackageImpl implements BehaviourMMP
 
 		stringAffectationEClass = createEClass(STRING_AFFECTATION);
 		createEAttribute(stringAffectationEClass, STRING_AFFECTATION__RECEIVED_STRING);
-
-		readAffectationEClass = createEClass(READ_AFFECTATION);
 
 		writeConsoleEClass = createEClass(WRITE_CONSOLE);
 		createEReference(writeConsoleEClass, WRITE_CONSOLE__VARIABLE);
@@ -1102,7 +1083,6 @@ public class BehaviourMMPackageImpl extends EPackageImpl implements BehaviourMMP
 		boolAffectationEClass.getESuperTypes().add(this.getAffectation());
 		charAffectationEClass.getESuperTypes().add(this.getAffectation());
 		stringAffectationEClass.getESuperTypes().add(this.getAffectation());
-		readAffectationEClass.getESuperTypes().add(this.getAffectation());
 		writeConsoleEClass.getESuperTypes().add(this.getStatement());
 
 		// Initialize classes, features, and operations; add parameters
@@ -1165,7 +1145,7 @@ public class BehaviourMMPackageImpl extends EPackageImpl implements BehaviourMMP
 
 		initEClass(ifConditionnalEClass, ifConditionnal.class, "ifConditionnal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getifConditionnal_Condition(), this.getOperator(), null, "condition", null, 1, 1, ifConditionnal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getifConditionnal_Else(), this.getelseConditionnal(), null, "else", null, 0, 1, ifConditionnal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getifConditionnal_ElseC(), this.getelseConditionnal(), null, "elseC", null, 0, 1, ifConditionnal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(elseConditionnalEClass, elseConditionnal.class, "elseConditionnal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1195,8 +1175,6 @@ public class BehaviourMMPackageImpl extends EPackageImpl implements BehaviourMMP
 
 		initEClass(stringAffectationEClass, stringAffectation.class, "stringAffectation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getstringAffectation_ReceivedString(), ecorePackage.getEString(), "receivedString", null, 1, 1, stringAffectation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(readAffectationEClass, readAffectation.class, "readAffectation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(writeConsoleEClass, writeConsole.class, "writeConsole", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getwriteConsole_Variable(), this.getVariable(), null, "variable", null, 0, -1, writeConsole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -112,43 +112,6 @@ public interface StructureMMPackage extends EPackage {
 	int CLASS_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link structureMM.impl.PackageImpl <em>Package</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see structureMM.impl.PackageImpl
-	 * @see structureMM.impl.StructureMMPackageImpl#getPackage()
-	 * @generated
-	 */
-	int PACKAGE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACKAGE__NAME = 0;
-
-	/**
-	 * The number of structural features of the '<em>Package</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACKAGE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Package</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACKAGE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link structureMM.impl.AttributeImpl <em>Attribute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -156,7 +119,7 @@ public interface StructureMMPackage extends EPackage {
 	 * @see structureMM.impl.StructureMMPackageImpl#getAttribute()
 	 * @generated
 	 */
-	int ATTRIBUTE = 2;
+	int ATTRIBUTE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -193,7 +156,7 @@ public interface StructureMMPackage extends EPackage {
 	 * @see structureMM.impl.StructureMMPackageImpl#getdoubleAttribute()
 	 * @generated
 	 */
-	int DOUBLE_ATTRIBUTE = 3;
+	int DOUBLE_ATTRIBUTE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -239,7 +202,7 @@ public interface StructureMMPackage extends EPackage {
 	 * @see structureMM.impl.StructureMMPackageImpl#getstringAttribute()
 	 * @generated
 	 */
-	int STRING_ATTRIBUTE = 4;
+	int STRING_ATTRIBUTE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -285,7 +248,7 @@ public interface StructureMMPackage extends EPackage {
 	 * @see structureMM.impl.StructureMMPackageImpl#getcharAttribute()
 	 * @generated
 	 */
-	int CHAR_ATTRIBUTE = 5;
+	int CHAR_ATTRIBUTE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -331,7 +294,7 @@ public interface StructureMMPackage extends EPackage {
 	 * @see structureMM.impl.StructureMMPackageImpl#getboolAttribute()
 	 * @generated
 	 */
-	int BOOL_ATTRIBUTE = 6;
+	int BOOL_ATTRIBUTE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -377,7 +340,7 @@ public interface StructureMMPackage extends EPackage {
 	 * @see structureMM.impl.StructureMMPackageImpl#getintAttribute()
 	 * @generated
 	 */
-	int INT_ATTRIBUTE = 7;
+	int INT_ATTRIBUTE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -423,7 +386,7 @@ public interface StructureMMPackage extends EPackage {
 	 * @see structureMM.impl.StructureMMPackageImpl#getMethod()
 	 * @generated
 	 */
-	int METHOD = 8;
+	int METHOD = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -478,7 +441,7 @@ public interface StructureMMPackage extends EPackage {
 	 * @see structureMM.impl.StructureMMPackageImpl#getintMethod()
 	 * @generated
 	 */
-	int INT_METHOD = 9;
+	int INT_METHOD = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -542,7 +505,7 @@ public interface StructureMMPackage extends EPackage {
 	 * @see structureMM.impl.StructureMMPackageImpl#getboolMethod()
 	 * @generated
 	 */
-	int BOOL_METHOD = 10;
+	int BOOL_METHOD = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -606,7 +569,7 @@ public interface StructureMMPackage extends EPackage {
 	 * @see structureMM.impl.StructureMMPackageImpl#getcharMethod()
 	 * @generated
 	 */
-	int CHAR_METHOD = 11;
+	int CHAR_METHOD = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -670,7 +633,7 @@ public interface StructureMMPackage extends EPackage {
 	 * @see structureMM.impl.StructureMMPackageImpl#getstringMethod()
 	 * @generated
 	 */
-	int STRING_METHOD = 12;
+	int STRING_METHOD = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -734,7 +697,7 @@ public interface StructureMMPackage extends EPackage {
 	 * @see structureMM.impl.StructureMMPackageImpl#getdoubleMethod()
 	 * @generated
 	 */
-	int DOUBLE_METHOD = 13;
+	int DOUBLE_METHOD = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -833,27 +796,6 @@ public interface StructureMMPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getClass_Attributes();
-
-	/**
-	 * Returns the meta object for class '{@link structureMM.Package <em>Package</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Package</em>'.
-	 * @see structureMM.Package
-	 * @generated
-	 */
-	EClass getPackage();
-
-	/**
-	 * Returns the meta object for the attribute '{@link structureMM.Package#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see structureMM.Package#getName()
-	 * @see #getPackage()
-	 * @generated
-	 */
-	EAttribute getPackage_Name();
 
 	/**
 	 * Returns the meta object for class '{@link structureMM.Attribute <em>Attribute</em>}'.
@@ -1185,24 +1127,6 @@ public interface StructureMMPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CLASS__ATTRIBUTES = eINSTANCE.getClass_Attributes();
-
-		/**
-		 * The meta object literal for the '{@link structureMM.impl.PackageImpl <em>Package</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see structureMM.impl.PackageImpl
-		 * @see structureMM.impl.StructureMMPackageImpl#getPackage()
-		 * @generated
-		 */
-		EClass PACKAGE = eINSTANCE.getPackage();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PACKAGE__NAME = eINSTANCE.getPackage_Name();
 
 		/**
 		 * The meta object literal for the '{@link structureMM.impl.AttributeImpl <em>Attribute</em>}' class.

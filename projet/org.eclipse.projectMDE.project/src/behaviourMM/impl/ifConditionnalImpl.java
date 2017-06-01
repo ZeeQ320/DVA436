@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link behaviourMM.impl.ifConditionnalImpl#getCondition <em>Condition</em>}</li>
- *   <li>{@link behaviourMM.impl.ifConditionnalImpl#getElse <em>Else</em>}</li>
+ *   <li>{@link behaviourMM.impl.ifConditionnalImpl#getElseC <em>Else C</em>}</li>
  * </ul>
  *
  * @generated
@@ -41,14 +41,14 @@ public class ifConditionnalImpl extends ConditionnalImpl implements ifConditionn
 	protected Operator condition;
 
 	/**
-	 * The cached value of the '{@link #getElse() <em>Else</em>}' containment reference.
+	 * The cached value of the '{@link #getElseC() <em>Else C</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getElse()
+	 * @see #getElseC()
 	 * @generated
 	 * @ordered
 	 */
-	protected elseConditionnal else_;
+	protected elseConditionnal elseC;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -117,8 +117,8 @@ public class ifConditionnalImpl extends ConditionnalImpl implements ifConditionn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public elseConditionnal getElse() {
-		return else_;
+	public elseConditionnal getElseC() {
+		return elseC;
 	}
 
 	/**
@@ -126,11 +126,11 @@ public class ifConditionnalImpl extends ConditionnalImpl implements ifConditionn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetElse(elseConditionnal newElse, NotificationChain msgs) {
-		elseConditionnal oldElse = else_;
-		else_ = newElse;
+	public NotificationChain basicSetElseC(elseConditionnal newElseC, NotificationChain msgs) {
+		elseConditionnal oldElseC = elseC;
+		elseC = newElseC;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BehaviourMMPackage.IF_CONDITIONNAL__ELSE, oldElse, newElse);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BehaviourMMPackage.IF_CONDITIONNAL__ELSE_C, oldElseC, newElseC);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -141,18 +141,18 @@ public class ifConditionnalImpl extends ConditionnalImpl implements ifConditionn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setElse(elseConditionnal newElse) {
-		if (newElse != else_) {
+	public void setElseC(elseConditionnal newElseC) {
+		if (newElseC != elseC) {
 			NotificationChain msgs = null;
-			if (else_ != null)
-				msgs = ((InternalEObject)else_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BehaviourMMPackage.IF_CONDITIONNAL__ELSE, null, msgs);
-			if (newElse != null)
-				msgs = ((InternalEObject)newElse).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BehaviourMMPackage.IF_CONDITIONNAL__ELSE, null, msgs);
-			msgs = basicSetElse(newElse, msgs);
+			if (elseC != null)
+				msgs = ((InternalEObject)elseC).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BehaviourMMPackage.IF_CONDITIONNAL__ELSE_C, null, msgs);
+			if (newElseC != null)
+				msgs = ((InternalEObject)newElseC).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BehaviourMMPackage.IF_CONDITIONNAL__ELSE_C, null, msgs);
+			msgs = basicSetElseC(newElseC, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BehaviourMMPackage.IF_CONDITIONNAL__ELSE, newElse, newElse));
+			eNotify(new ENotificationImpl(this, Notification.SET, BehaviourMMPackage.IF_CONDITIONNAL__ELSE_C, newElseC, newElseC));
 	}
 
 	/**
@@ -165,8 +165,8 @@ public class ifConditionnalImpl extends ConditionnalImpl implements ifConditionn
 		switch (featureID) {
 			case BehaviourMMPackage.IF_CONDITIONNAL__CONDITION:
 				return basicSetCondition(null, msgs);
-			case BehaviourMMPackage.IF_CONDITIONNAL__ELSE:
-				return basicSetElse(null, msgs);
+			case BehaviourMMPackage.IF_CONDITIONNAL__ELSE_C:
+				return basicSetElseC(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -181,8 +181,8 @@ public class ifConditionnalImpl extends ConditionnalImpl implements ifConditionn
 		switch (featureID) {
 			case BehaviourMMPackage.IF_CONDITIONNAL__CONDITION:
 				return getCondition();
-			case BehaviourMMPackage.IF_CONDITIONNAL__ELSE:
-				return getElse();
+			case BehaviourMMPackage.IF_CONDITIONNAL__ELSE_C:
+				return getElseC();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -198,8 +198,8 @@ public class ifConditionnalImpl extends ConditionnalImpl implements ifConditionn
 			case BehaviourMMPackage.IF_CONDITIONNAL__CONDITION:
 				setCondition((Operator)newValue);
 				return;
-			case BehaviourMMPackage.IF_CONDITIONNAL__ELSE:
-				setElse((elseConditionnal)newValue);
+			case BehaviourMMPackage.IF_CONDITIONNAL__ELSE_C:
+				setElseC((elseConditionnal)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -216,8 +216,8 @@ public class ifConditionnalImpl extends ConditionnalImpl implements ifConditionn
 			case BehaviourMMPackage.IF_CONDITIONNAL__CONDITION:
 				setCondition((Operator)null);
 				return;
-			case BehaviourMMPackage.IF_CONDITIONNAL__ELSE:
-				setElse((elseConditionnal)null);
+			case BehaviourMMPackage.IF_CONDITIONNAL__ELSE_C:
+				setElseC((elseConditionnal)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -233,8 +233,8 @@ public class ifConditionnalImpl extends ConditionnalImpl implements ifConditionn
 		switch (featureID) {
 			case BehaviourMMPackage.IF_CONDITIONNAL__CONDITION:
 				return condition != null;
-			case BehaviourMMPackage.IF_CONDITIONNAL__ELSE:
-				return else_ != null;
+			case BehaviourMMPackage.IF_CONDITIONNAL__ELSE_C:
+				return elseC != null;
 		}
 		return super.eIsSet(featureID);
 	}

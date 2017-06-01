@@ -200,10 +200,6 @@ public class BehaviourMMAdapterFactory extends AdapterFactoryImpl {
 				return createstringAffectationAdapter();
 			}
 			@Override
-			public Adapter casereadAffectation(readAffectation object) {
-				return createreadAffectationAdapter();
-			}
-			@Override
 			public Adapter casewriteConsole(writeConsole object) {
 				return createwriteConsoleAdapter();
 			}
@@ -686,20 +682,6 @@ public class BehaviourMMAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createstringAffectationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link behaviourMM.readAffectation <em>read Affectation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see behaviourMM.readAffectation
-	 * @generated
-	 */
-	public Adapter createreadAffectationAdapter() {
 		return null;
 	}
 

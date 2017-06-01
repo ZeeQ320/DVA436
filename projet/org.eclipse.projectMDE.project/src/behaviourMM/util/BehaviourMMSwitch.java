@@ -310,14 +310,6 @@ public class BehaviourMMSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case BehaviourMMPackage.READ_AFFECTATION: {
-				readAffectation readAffectation = (readAffectation)theEObject;
-				T result = casereadAffectation(readAffectation);
-				if (result == null) result = caseAffectation(readAffectation);
-				if (result == null) result = caseStatement(readAffectation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case BehaviourMMPackage.WRITE_CONSOLE: {
 				writeConsole writeConsole = (writeConsole)theEObject;
 				T result = casewriteConsole(writeConsole);
@@ -821,21 +813,6 @@ public class BehaviourMMSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casestringAffectation(stringAffectation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>read Affectation</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>read Affectation</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casereadAffectation(readAffectation object) {
 		return null;
 	}
 
