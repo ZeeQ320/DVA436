@@ -491,11 +491,11 @@ public class test implements IGenerator {
       String _name_1 = _element2.getName();
       boolean _notEquals_1 = (!Objects.equal(_name_1, null));
       if (_notEquals_1) {
-        return "o.receivingVariable» = «o.receivedOperation.element1.name» + «o.receivedOperation.element2.name";
+        return "o.receivingVariable.name» = «o.receivedOperation.element1.name» + «o.receivedOperation.element2.name";
       }
-      return "o.receivingVariable» = «o.receivedOperation.element1.name» + «o.receivedOperation.element2.value";
+      return "o.receivingVariable.name» = «o.receivedOperation.element1.name» + «o.receivedOperation.element2.value";
     }
-    return "o.receivingVariable» = «o.receivedOperation.element1.value» + «o.receivedOperation.element2.value";
+    return "o.receivingVariable.name» = «o.receivedOperation.element1.value» + «o.receivedOperation.element2.value";
   }
   
   public String getSoustraction(final soustractionOperator s) {
@@ -507,11 +507,11 @@ public class test implements IGenerator {
       String _name_1 = _element2.getName();
       boolean _notEquals_1 = (!Objects.equal(_name_1, null));
       if (_notEquals_1) {
-        return "o.receivingVariable» = «o.receivedOperation.element1.name» - «o.receivedOperation.element2.name";
+        return "o.receivingVariable.name» = «o.receivedOperation.element1.name» - «o.receivedOperation.element2.name";
       }
-      return "o.receivingVariable» = «o.receivedOperation.element1.name» - «o.receivedOperation.element2.value";
+      return "o.receivingVariable.name» = «o.receivedOperation.element1.name» - «o.receivedOperation.element2.value";
     }
-    return "o.receivingVariable» = «o.receivedOperation.element1.value» - «o.receivedOperation.element2.value";
+    return "o.receivingVariable.name» = «o.receivedOperation.element1.value» - «o.receivedOperation.element2.value";
   }
   
   public String getMultiplication(final multiplicationOperator m) {
@@ -523,11 +523,11 @@ public class test implements IGenerator {
       String _name_1 = _element2.getName();
       boolean _notEquals_1 = (!Objects.equal(_name_1, null));
       if (_notEquals_1) {
-        return "o.receivingVariable» = «o.receivedOperation.element1.name» * «o.receivedOperation.element2.name";
+        return "o.receivingVariable.name» = «o.receivedOperation.element1.name» * «o.receivedOperation.element2.name";
       }
-      return "o.receivingVariable» = «o.receivedOperation.element1.name» * «o.receivedOperation.element2.value";
+      return "o.receivingVariable.name» = «o.receivedOperation.element1.name» * «o.receivedOperation.element2.value";
     }
-    return "o.receivingVariable» = «o.receivedOperation.element1.value» * «o.receivedOperation.element2.value";
+    return "o.receivingVariable.name» = «o.receivedOperation.element1.value» * «o.receivedOperation.element2.value";
   }
   
   public String getDivision(final divisionOperator d) {
@@ -539,11 +539,11 @@ public class test implements IGenerator {
       String _name_1 = _element2.getName();
       boolean _notEquals_1 = (!Objects.equal(_name_1, null));
       if (_notEquals_1) {
-        return "o.receivingVariable» = «o.receivedOperation.element1.name» / «o.receivedOperation.element2.name";
+        return "o.receivingVariable.name» = «o.receivedOperation.element1.name» / «o.receivedOperation.element2.name";
       }
-      return "o.receivingVariable» = «o.receivedOperation.element1.name» / «o.receivedOperation.element2.value";
+      return "o.receivingVariable.name» = «o.receivedOperation.element1.name» / «o.receivedOperation.element2.value";
     }
-    return "o.receivingVariable» = «o.receivedOperation.element1.value» / «o.receivedOperation.element2.value";
+    return "o.receivingVariable.name» = «o.receivedOperation.element1.value» / «o.receivedOperation.element2.value";
   }
   
   public StringBuilder getOperationAff(final operationAffectation o) {
@@ -578,7 +578,8 @@ public class test implements IGenerator {
     _builder.append(_receivingVariable, "\t");
     _builder.append(" = ");
     int _receivedInt = i.getReceivedInt();
-    _builder.append(_receivedInt, "\t");
+    String _string = Integer.valueOf(_receivedInt).toString();
+    _builder.append(_string, "\t");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
@@ -593,7 +594,8 @@ public class test implements IGenerator {
     _builder.append(_receivingVariable, "\t");
     _builder.append(" = ");
     double _receivedDouble = d.getReceivedDouble();
-    _builder.append(_receivedDouble, "\t");
+    String _string = Double.valueOf(_receivedDouble).toString();
+    _builder.append(_string, "\t");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
@@ -608,7 +610,8 @@ public class test implements IGenerator {
     _builder.append(_receivingVariable, "\t");
     _builder.append(" = ");
     boolean _isReceivedBool = b.isReceivedBool();
-    _builder.append(_isReceivedBool, "\t");
+    String _string = Boolean.valueOf(_isReceivedBool).toString();
+    _builder.append(_string, "\t");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
@@ -623,7 +626,8 @@ public class test implements IGenerator {
     _builder.append(_receivingVariable, "\t");
     _builder.append(" = ");
     char _receivedChar = c.getReceivedChar();
-    _builder.append(_receivedChar, "\t");
+    String _string = Character.valueOf(_receivedChar).toString();
+    _builder.append(_string, "\t");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
@@ -650,10 +654,12 @@ public class test implements IGenerator {
     _builder.newLine();
     _builder.append("\t");
     Variable _receivingVariable = v.getReceivingVariable();
-    _builder.append(_receivingVariable, "\t");
+    String _name = _receivingVariable.getName();
+    _builder.append(_name, "\t");
     _builder.append(" = ");
     Variable _receivedVariable = v.getReceivedVariable();
-    _builder.append(_receivedVariable, "\t");
+    String _name_1 = _receivedVariable.getName();
+    _builder.append(_name_1, "\t");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.newLine();

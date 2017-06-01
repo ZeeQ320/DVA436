@@ -305,11 +305,11 @@ class test implements IGenerator {
 	
 		if (a.element1.name != null) {
 			if (a.element2.name != null) {
-				return "o.receivingVariable» = «o.receivedOperation.element1.name» + «o.receivedOperation.element2.name"
+				return "o.receivingVariable.name» = «o.receivedOperation.element1.name» + «o.receivedOperation.element2.name"
 			}
-			return "o.receivingVariable» = «o.receivedOperation.element1.name» + «o.receivedOperation.element2.value"
+			return "o.receivingVariable.name» = «o.receivedOperation.element1.name» + «o.receivedOperation.element2.value"
 		}
-		return "o.receivingVariable» = «o.receivedOperation.element1.value» + «o.receivedOperation.element2.value"
+		return "o.receivingVariable.name» = «o.receivedOperation.element1.value» + «o.receivedOperation.element2.value"
 		
 	}
 	
@@ -317,11 +317,11 @@ class test implements IGenerator {
 	
 		if (s.element1.name != null) {
 			if (s.element2.name != null) {
-				return "o.receivingVariable» = «o.receivedOperation.element1.name» - «o.receivedOperation.element2.name"
+				return "o.receivingVariable.name» = «o.receivedOperation.element1.name» - «o.receivedOperation.element2.name"
 			}
-			return "o.receivingVariable» = «o.receivedOperation.element1.name» - «o.receivedOperation.element2.value"
+			return "o.receivingVariable.name» = «o.receivedOperation.element1.name» - «o.receivedOperation.element2.value"
 		}
-		return "o.receivingVariable» = «o.receivedOperation.element1.value» - «o.receivedOperation.element2.value"
+		return "o.receivingVariable.name» = «o.receivedOperation.element1.value» - «o.receivedOperation.element2.value"
 		
 	}
 	
@@ -329,11 +329,11 @@ class test implements IGenerator {
 	
 		if (m.element1.name != null) {
 			if (m.element2.name != null) {
-				return "o.receivingVariable» = «o.receivedOperation.element1.name» * «o.receivedOperation.element2.name"
+				return "o.receivingVariable.name» = «o.receivedOperation.element1.name» * «o.receivedOperation.element2.name"
 			}
-			return "o.receivingVariable» = «o.receivedOperation.element1.name» * «o.receivedOperation.element2.value"
+			return "o.receivingVariable.name» = «o.receivedOperation.element1.name» * «o.receivedOperation.element2.value"
 		}
-		return "o.receivingVariable» = «o.receivedOperation.element1.value» * «o.receivedOperation.element2.value"
+		return "o.receivingVariable.name» = «o.receivedOperation.element1.value» * «o.receivedOperation.element2.value"
 		
 	}
 	
@@ -341,11 +341,11 @@ class test implements IGenerator {
 	
 		if (d.element1.name != null) {
 			if (d.element2.name != null) {
-				return "o.receivingVariable» = «o.receivedOperation.element1.name» / «o.receivedOperation.element2.name"
+				return "o.receivingVariable.name» = «o.receivedOperation.element1.name» / «o.receivedOperation.element2.name"
 			}
-			return "o.receivingVariable» = «o.receivedOperation.element1.name» / «o.receivedOperation.element2.value"
+			return "o.receivingVariable.name» = «o.receivedOperation.element1.name» / «o.receivedOperation.element2.value"
 		}
-		return "o.receivingVariable» = «o.receivedOperation.element1.value» / «o.receivedOperation.element2.value"
+		return "o.receivingVariable.name» = «o.receivedOperation.element1.value» / «o.receivedOperation.element2.value"
 		
 	}
 
@@ -369,25 +369,25 @@ class test implements IGenerator {
 	
 	def getIntAff(intAffectation i) '''
 	
-		«i.receivingVariable» = «i.receivedInt»;
+		«i.receivingVariable» = «i.receivedInt.toString»;
 	
 	'''
 	
 	def getDoubleAff(doubleAffectation d) '''
 	
-		«d.receivingVariable» = «d.receivedDouble»;
+		«d.receivingVariable» = «d.receivedDouble.toString»;
 	
 	'''
 	
 	def getBoolAff(boolAffectation b) '''
 	
-		«b.receivingVariable» = «b.receivedBool»;
+		«b.receivingVariable» = «b.receivedBool.toString»;
 	
 	'''
 	
 	def getCharAff(charAffectation c) '''
 	
-		«c.receivingVariable» = «c.receivedChar»;
+		«c.receivingVariable» = «c.receivedChar.toString»;
 	
 	'''
 	
@@ -399,7 +399,7 @@ class test implements IGenerator {
 
 	def getVariableAff(variableAffectation v) '''
 	
-		«v.receivingVariable» = «v.receivedVariable»;
+		«v.receivingVariable.name» = «v.receivedVariable.name»;
 	
 	'''
 	
